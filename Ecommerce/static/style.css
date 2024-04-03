@@ -1,0 +1,184 @@
+body {
+    margin: 5px;
+    font-family: Roboto, Arial, sans-serif;
+    min-height: 100vh;    
+}
+
+.text-center img {
+    width:150px;
+    height:150px
+}
+
+.dropdown-item:focus {
+    background-color: #ffc107;
+}
+
+.form-control:hover {
+    outline-color: #ffc107;
+}
+
+.search-input:focus {
+    border: 1px solid #ffc107;
+    box-shadow: 1px 1px 2px #ffc107, -1px -1px 2px #ffc107;
+}
+
+.navbar-brand img {
+    width:60px; 
+    height:60px
+}
+
+.product-image {
+    width:100%; 
+    height:600px; 
+    margin-bottom: 10px;
+}
+
+.product-container {
+    padding-bottom: 10px;
+}
+
+.cat_img {
+    width: 100%; 
+    height: 400px;
+    padding-bottom: 10px;;
+}
+
+.card-img-top {
+    height: 18.75rem;
+    padding: 10px;
+}
+
+.description {
+    text-align: justify;
+}
+
+.product-text {
+    text-align: justify;  
+}
+ 
+.card {
+    max-width: 100%;
+}
+
+.card-img {
+    width: 80%; 
+    height: 300px;
+    padding: 10px;
+}
+
+#footer {
+    position: sticky;
+    top: 100%;
+}
+
+/* form */
+
+.head {
+    padding-top: 20px;
+}
+
+.text_center {
+    display: flex;
+    justify-content: center;
+}
+
+.text_center img {
+    align-self: center;
+    width:150px;
+    height:150px;
+}
+
+.profile {
+    background-color: f1f1f1;
+    text-align:center ;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.reg {
+    border: 1px solid black;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input {
+    padding: 15px;
+    background: #f1f1f1;
+    margin: 5px 0 22px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: rgb(12, 12, 90);
+    color: white;
+    padding: 16px 20px;
+    margin: 5px 0 22px 0;
+    width: 100%;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+}
+
+/* account*/
+
+.p-name {
+    text-transform: capitalize;
+
+}
+
+.u-details {
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+
+#u-fname,
+#u-lname {
+   text-transform: capitalize;
+}
+
+.user-info-box {
+    border: 1px solid white;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.p-det {
+    justify-content: center;
+    text-align: left;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-left: 130px;
+}
+
+.text_image img {
+    align-self: center;
+    width:150px;
+    height:150px;
+}
+.p-btn {
+    margin-bottom: 10px;
+}
+
+/*delete*/
+
+.h-delete {
+    color: rgb(12, 12, 90);
+}
+
+.del-btn{
+    background-color: #ffc107;
+}

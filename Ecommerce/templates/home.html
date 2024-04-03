@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}eStore{% endblock %}
+{% load static %}
+{% block content %}
+{% if category%}
+<div>
+    <div>
+        <p><a href="{% url 'allproducts' %}">Our Products Category</a></p>
+    </div>
+</div>
+{% endif %}
+
+<div>
+    {% if category %}
+    <img class="cat_img" src="{{category.image.url}}"   alt="{{category.name}}">
+</div>
+
+<div>
+    <h1>{{category.name}}</h1>
+    <p class="description">{{category.description}}</p>
+</div>
+   {% else %}
+<div>
+    <img src="{% static 'img/shopwall.png' %}" alt="Products collection" class="product-image">
+</div>
+<div class="product-container">
+    <h1>Our Products Collection</h1>
+    <p class="product-text">
+        Welcome to our eStore! Explore our wide range of products including dress materials, electronics, home & living essentials, and much more. Whether you're looking for trendy fashion items or high-tech gadgets, we have something for everyone. Browse through our collection and find the perfect items to suit your needs and style. Discover the latest trends and must-have items in our carefully curated collection. From classic staples to cutting-edge innovations, we have everything you need to elevate your lifestyle. Explore our diverse selection of products, all designed to enhance your daily life. Whether you're shopping for yourself or searching for the perfect gift, we've got you covered. At E-Store, we pride ourselves on offering high-quality products at affordable prices. Shop with confidence knowing that you're getting the best value for your money. Join our community of satisfied customers and experience the convenience of online shopping with fast shipping and reliable customer service. Your satisfaction is our top priority. Stay up-to-date with our latest arrivals and exclusive deals by subscribing to our newsletter. Don't miss out on special promotions and exciting offers! Need assistance or have a question? Our friendly customer support team is here to help. Contact us anytime for personalized assistance and expert advice.
+    </p>
+</div>
+
+{% endif %}
+
+<div class="container-fluid">
+    <div class="row custom-row" >
+        {% for product in products %}
+        <div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-3">
+
+            <div class="card h-100">
+                <a href="{{ product.get_url }}" >
+                    <img class="card-img-top" src="{{ product.image.url }}"  alt="{{ product.name }}">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">&#8377;{{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
+
+

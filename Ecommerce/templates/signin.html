@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body class="profile">
+    <header class="head">
+        <div class="text_center">
+            <a href="{% url 'allproducts' %}">
+                <img src="{% static 'img/e-logo.png' %}" alt="e-logo.png">
+            </a>
+        </div>
+    </header>
+    <form class="reg" action="" method="post">
+        {% csrf_token %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <label >Username</label>
+        <input class="input" type="text" id="username" name="username" placeholder="Enter your username" required><br>
+        <label >Password</label>
+        <input class="input" type="password" id="password1" name="password1" placeholder="Enter the password" required><br>
+        <button class="button" type="submit">Login</button>
+        <div class="signin">
+            <p>New User? <a href="/signup">Sign up</a></p>
+        </div>
+    </form>
+</body>
+</html>
