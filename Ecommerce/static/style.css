@@ -142,3 +142,16 @@ body {
     margin: 0 auto;
 }
 
+/*search*/
+
+.s-query {
+   color: rgb(12, 12, 90);
+}
+
+.no-item {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(12, 12, 90);
+    margin-top: 100px;
+}

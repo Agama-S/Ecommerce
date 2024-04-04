@@ -85,7 +85,13 @@ def delete(request):
         return render(request, 'account.html', {'delete': True})
 
 
-
+def search(request):
+    query = request.GET.get('q')
+    if query != None:
+        products = Product.objects.filter(name__icontains=query)
+    else:
+        products = Product.objects.all()
+    return render(request, 'search.html', {'products': products, 'query': query})
 
 
 
