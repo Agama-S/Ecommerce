@@ -13,7 +13,9 @@
 <body>
 <div>
     {% include 'header.html' %}
-    {% include 'navbar.html' %}
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
     {% block content%} {% endblock %}
 </div>
 

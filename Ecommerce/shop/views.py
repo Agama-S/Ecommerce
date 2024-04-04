@@ -82,8 +82,7 @@ def delete(request):
         request.user.delete()
         return redirect('allproducts')
     else:
-        # Handle GET requests, maybe render a confirmation page
-        return render(request, 'delete.html')
+        return render(request, 'account.html', {'delete': True})
 
 
 

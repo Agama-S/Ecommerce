@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body class="profile">
-    <header>
-        <div class="text_center">
-            <a href="{% url 'allproducts' %}">
-                <img src="{% static 'img/e-logo.png' %}" alt="e-logo.png">
-            </a>
-        </div>
-    </header>
+{% extends 'base.html' %}
+{% block title %}signin{% endblock %}
+{% block navbar %}
+{% endblock %}
+
+{% block content%}
     <form class="reg" action="" method="post" >
-        <h1>Create Account</h1>
+        <h3>Create Account</h3>
         {% csrf_token %}
         {% if messages %}
             <ul class="messages">
@@ -42,5 +32,4 @@
             <p>Already have an account? <a href="/signin">Sign in</a></p>
         </div>
     </form>
-</body>
-</html>
+{% endblock %}

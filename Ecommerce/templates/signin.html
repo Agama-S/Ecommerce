@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body class="profile">
-    <header class="head">
-        <div class="text_center">
-            <a href="{% url 'allproducts' %}">
-                <img src="{% static 'img/e-logo.png' %}" alt="e-logo.png">
-            </a>
-        </div>
-    </header>
+{% extends 'base.html' %}
+{% block title %}signin{% endblock %}
+{% block navbar %}
+{% endblock %}
+
+{% block content%}
     <form class="reg" action="" method="post">
         {% csrf_token %}
         {% if messages %}
@@ -32,5 +22,4 @@
             <p>New User? <a href="/signup">Sign up</a></p>
         </div>
     </form>
-</body>
-</html>
+{% endblock %}
