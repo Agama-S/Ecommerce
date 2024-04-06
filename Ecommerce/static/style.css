@@ -4,10 +4,19 @@ body {
     min-height: 100vh;    
 }
 
-.text-center img {
-    width:150px;
-    height:150px
+/*header img*/
+
+.header-container {
+    display: flex;
+    justify-content: center;
+
 }
+
+.header-img img {
+    width:110px;
+    height:100px;
+}
+/*  */
 
 .dropdown-item:focus {
     background-color: #ffc107;
